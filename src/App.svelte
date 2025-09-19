@@ -59,17 +59,19 @@
 
 	<div class="w-full max-w-4xl">
 		<div class="group-data-focused:fade-out">
-			<h1 class="text-center font-mono text-3xl font-semibold tracking-tight sm:text-4xl">
+			<h1
+				class="text-center font-mono text-3xl font-semibold tracking-tight sm:text-4xl xl:text-5xl"
+			>
 				CodeDrop
 			</h1>
-			<p class="mt-2 text-center text-sm text-neutral-400">
+			<p class="mt-2 text-center text-sm text-neutral-400 xl:text-base">
 				20 Sep 2025 • 08:00-17:00 IST (UTC+5:30)
 			</p>
 		</div>
 
-		<section class="mt-10">
+		<section class="mt-10 xl:mt-14">
 			<p
-				class="text-center text-xs tracking-widest text-neutral-400 uppercase group-data-focused:fade-out"
+				class="text-center text-xs tracking-widest text-neutral-400 uppercase group-data-focused:fade-out xl:text-sm"
 			>
 				{label}
 			</p>
@@ -91,7 +93,7 @@
 							style={`width: ${progress}%`}
 						></div>
 					</div>
-					<div class="mt-2 flex justify-between text-[10px] text-neutral-500 sm:text-xs">
+					<div class="mt-2 flex justify-between text-[10px] text-neutral-500 sm:text-xs xl:text-sm">
 						<span>08:00 IST</span>
 						<span>17:00 IST</span>
 					</div>
@@ -111,9 +113,11 @@
 </main>
 
 {#snippet block(num: number, label: string)}
-	<div class="rounded-xl bg-neutral-900/70 p-4 text-center ring-1 ring-white/10 sm:p-5">
-		<div class="font-mono text-3xl tabular-nums sm:text-5xl">{pad(num)}</div>
-		<div class="mt-1 text-[10px] tracking-wider text-neutral-400 uppercase sm:text-xs">
+	<div
+		class="space-y-1 rounded-xl bg-neutral-900/70 p-4 text-center ring-1 ring-white/10 sm:p-5 xl:space-y-2"
+	>
+		<div class="font-mono text-3xl tabular-nums sm:text-5xl xl:text-7xl">{pad(num)}</div>
+		<div class="text-ssm tracking-wider text-neutral-400 uppercase sm:text-xs xl:text-sm">
 			{label}
 		</div>
 	</div>

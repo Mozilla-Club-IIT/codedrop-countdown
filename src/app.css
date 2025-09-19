@@ -36,17 +36,15 @@
 
 @utility slide-up-delayed {
 	will-change: transform;
-	--tw-translate-y: calc(var(--spacing) * -12) /* -3rem = -48px */;
+	--tw-translate-y: --spacing(-12);
 	translate: var(--tw-translate-x) var(--tw-translate-y);
 	transition-duration: var(--transition-duration-emphasized);
 	transition-timing-function: var(--ease-emphasized-decelerate);
 	transition-delay: 100ms;
-}
 
-@property --violet-alpha {
-	syntax: "<number>";
-	inherits: false;
-	initial-value: 0.4;
+	@variant xl {
+		--tw-translate-y: --spacing(-25);
+	}
 }
 
 html {
