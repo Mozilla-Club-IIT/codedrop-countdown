@@ -1,0 +1,48 @@
+@import "@fontsource/ibm-plex-mono/500.css";
+@import "@fontsource-variable/ibm-plex-sans";
+
+@import "tailwindcss";
+
+@theme {
+	--text-ssm: 0.813rem;
+
+	--transition-duration-emphasized: 500ms;
+	--transition-duration-emphasized-decelerate: 400ms;
+	--transition-duration-emphasized-accelerate: 200ms;
+	--transition-duration-standard: 300ms;
+	--transition-duration-standard-decelerate: 250ms;
+	--transition-duration-standard-accelerate: 200ms;
+	--transition-duration-late-afternoon: 1.5s;
+
+	--ease-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+	--ease-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+	--ease-standard: cubic-bezier(0.2, 0, 0, 1);
+	--ease-standard-decelerate: cubic-bezier(0, 0, 0, 1);
+	--ease-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
+
+	--font-sans: "IBM Plex Sans Variable", sans-serif;
+	--font-mono: "IBM Plex Mono", monospace;
+}
+
+@custom-variant data-focused (&[data-focused~="true"]);
+
+@utility fade-out {
+	opacity: 0;
+	pointer-events: none;
+	transition-property: opacity;
+	transition-duration: var(--transition-duration-standard);
+	transition-timing-function: var(--ease-standard);
+}
+
+@utility slide-up-delayed {
+	will-change: transform;
+	--tw-translate-y: calc(var(--spacing) * -12) /* -3rem = -48px */;
+	translate: var(--tw-translate-x) var(--tw-translate-y);
+	transition-duration: var(--transition-duration-emphasized);
+	transition-timing-function: var(--ease-emphasized-decelerate);
+	transition-delay: 100ms;
+}
+
+html {
+	@apply font-sans;
+}
