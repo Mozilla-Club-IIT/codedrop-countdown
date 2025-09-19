@@ -48,10 +48,7 @@
 
 <main
 	data-focused={focusMode}
-	class={[
-		"group flex min-h-screen items-center justify-center bg-neutral-950 p-6 text-neutral-50",
-		focusMode && "focus-mode group/focused"
-	]}
+	class="group relative flex min-h-screen items-center justify-center bg-neutral-950 p-6 text-neutral-50"
 >
 	<button
 		aria-pressed={focusMode}
@@ -91,7 +88,7 @@
 				<div class="mt-8 group-data-focused:fade-out">
 					<div class="h-2 overflow-hidden rounded-full bg-neutral-900/70 ring-1 ring-white/10">
 						<div
-							class="h-full bg-emerald-500 transition-[width] duration-700"
+							class="h-full bg-[#BC0CE2] transition-[width] duration-700"
 							style={`width: ${progress}%`}
 						></div>
 					</div>
@@ -102,6 +99,15 @@
 				</div>
 			{/if}
 		</section>
+	</div>
+
+	<div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
+		<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+			<div
+				class="h-[75vmin] w-[75vmin] rounded-full blur-3xl group-data-focused:fade-out"
+				style="background: radial-gradient(closest-side, rgba(115, 7, 148, 0.2), rgba(115, 7, 148, 0) 70%)"
+			></div>
+		</div>
 	</div>
 </main>
 

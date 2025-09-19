@@ -43,6 +43,12 @@
 	transition-delay: 100ms;
 }
 
+@property --violet-alpha {
+	syntax: "<number>";
+	inherits: false;
+	initial-value: 0.4;
+}
+
 html {
 	@apply font-sans;
 }
