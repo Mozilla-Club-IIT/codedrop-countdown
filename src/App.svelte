@@ -2,13 +2,12 @@
 	import { isBefore, differenceInMilliseconds, intervalToDuration } from "date-fns";
 
 	// IST is UTC+05:30. Convert fixed IST schedule to UTC to avoid local-time pitfalls.
-	// const start = new Date(Date.UTC(2025, 8, 20, 2, 30, 0)); // 20 Sep 2025, 08:00 IST
-	// const end = new Date(Date.UTC(2025, 8, 20, 11, 30, 0)); // 20 Sep 2025, 17:00 IST
+	const start = new Date(Date.UTC(2025, 8, 20, 2, 30, 0)); // 20 Sep 2025, 08:00 IST
+	const end = new Date(Date.UTC(2025, 8, 20, 11, 30, 0)); // 20 Sep 2025, 17:00 IST
 
 	// Temporary: start at 11:30 PM on Sep 19, 2025 (local time)
-	const start = new Date(2025, 8, 19, 23, 30, 0);
-	// End 4 hours after start
-	const end = new Date(start.getTime() + 4 * 60 * 60 * 1000);
+	// const start = new Date(2025, 8, 19, 23, 30, 0);
+	// const end = new Date(start.getTime() + 4 * 60 * 60 * 1000);
 
 	let now = $state(Date.now());
 	let focusMode = $state(false);
