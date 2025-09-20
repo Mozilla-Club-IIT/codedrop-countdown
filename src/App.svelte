@@ -2,8 +2,8 @@
 	import { isBefore, differenceInMilliseconds, intervalToDuration } from "date-fns";
 
 	// IST is UTC+05:30. Convert fixed IST schedule to UTC to avoid local-time pitfalls.
-	const start = new Date(Date.UTC(2025, 8, 20, 4, 0, 0)); // 20 Sep 2025, 09:30 IST
-	const end = new Date(Date.UTC(2025, 8, 20, 11, 0, 0)); // 20 Sep 2025, 16:30 IST (7 hours from 09:30)
+	const start = new Date(Date.UTC(2025, 8, 20, 4, 30, 0)); // 20 Sep 2025, 10:00 IST
+	const end = new Date(Date.UTC(2025, 8, 20, 10, 30, 0)); // 20 Sep 2025, 16:00 IST (6 hours from 10:00)
 
 	// Temporary: start at 11:30 PM on Sep 19, 2025 (local time)
 	// const start = new Date(2025, 8, 19, 23, 30, 0);
@@ -65,7 +65,7 @@
 				CodeDrop
 			</h1>
 			<p class="mt-2 text-center text-sm text-neutral-400 xl:text-base">
-				20 Sep 2025 • 08:00-17:00 IST (UTC+5:30)
+				20 Sep 2025 • 10:00-16:30 IST (UTC+5:30)
 			</p>
 		</div>
 
