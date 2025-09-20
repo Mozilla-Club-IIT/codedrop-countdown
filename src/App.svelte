@@ -47,7 +47,7 @@
 
 <main
 	data-focused={focusMode}
-	class="group relative flex min-h-screen items-center justify-center bg-neutral-950 p-6 text-neutral-50"
+	class="group relative flex min-h-screen items-center justify-center bg-transparent transition-colors data-focused:bg-neutral-950 p-6 text-neutral-50"
 >
 	<button
 		aria-pressed={focusMode}
@@ -60,7 +60,7 @@
 	<div class="w-full max-w-4xl">
 		<div class="group-data-focused:fade-out">
 			<h1
-				class="text-center font-mono text-3xl font-semibold tracking-tight sm:text-4xl xl:text-5xl"
+				class="text-center font-mono uppercase tracking-widest text-3xl font-semibold sm:text-4xl xl:text-5xl"
 			>
 				CodeDrop
 			</h1>
@@ -102,15 +102,23 @@
 		</section>
 	</div>
 
-	<div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
+	<!-- <div aria-hidden="true" class="pointer-events-none absolute inset-0 overflow-hidden">
 		<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
 			<div
 				class="h-[75vmin] w-[75vmin] rounded-full blur-3xl group-data-focused:fade-out"
 				style="background: radial-gradient(closest-side, rgba(115, 7, 148, 0.2), rgba(115, 7, 148, 0) 70%)"
 			></div>
 		</div>
-	</div>
+	</div> -->
+
+
 </main>
+
+	<img
+		src="/bg.png"
+		alt=""
+		class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-100 transition-opacity group-data-focused:opacity-0 -bg-conic-90 -z-10"
+	/>
 
 {#snippet block(num: number, label: string)}
 	<div
