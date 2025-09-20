@@ -65,7 +65,7 @@
 				CodeDrop
 			</h1>
 			<p class="mt-2 text-center text-sm text-neutral-400 xl:text-base">
-				20 Sep 2025 • 10:00-16:30 IST (UTC+5:30)
+				20 Sep 2025 • 10:00-16:00 IST (UTC+5:30)
 			</p>
 		</div>
 
